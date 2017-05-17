@@ -20,7 +20,7 @@ For this step the calibration matrix calculated from chessboard images is used. 
 
 After undistorting the images, four vertices are defined in a genral way so that they include the current driving lane path. These are the source vertices which will be used to transform the lane path. The transformed image shows the birds eye view of the lane path. Four vertices which represent a perfect rectange are chosen as destination vertices. The transformed lane path is shown inside these four vertices on image. The function *warp()* is used to transfrom the image. The *warp()* function produces a warped image and also gives inverse transform matrix as outputs. The inverse transform matrix is used later in the pipeline to plot the lane path in its original form. An example image is given below.
 
-### image
+![](https://github.com/pratvdev/CarND-AdvancedLaneDetection/blob/master/output_images/Warped_Example.png?raw=true)
 
 ### 3) Finding Yellow and White Lane Markings
 
@@ -34,7 +34,7 @@ The transformed image is passed to a function *abs_sobel_thresh()*. This functio
 
 To identify the lane markings, the image outputs from step 3 and step 4 are combines. Step 3 gives us a masked images which contains yellow and white lane markings and step 4 gives us an image with threshold sobel filter applied along x direction. The pixel values greater than or equal to *0.5* from step 3 or pixel values equal to *1* from step 4 are considered for the combined image. An example is given below.
 
-### image
+![](https://github.com/pratvdev/CarND-AdvancedLaneDetection/blob/master/output_images/Combined_Example1.png?raw=true)
 
 ### 6) Finding Lane Marking Mathematically
 
@@ -42,7 +42,7 @@ The combined image is then used to identify the lane markings and generate polyn
 
 For this whole process the function *findLanes()* is used. The calculated x and y coordinates are outputs for this function and are later used to draw the lane path polygon on the original image. An example image for detected lane lines is shown below.
 
-### image
+![](https://github.com/pratvdev/CarND-AdvancedLaneDetection/blob/master/output_images/lane_fit_example.png?raw=true)
 
 ### 7) Drawing Lane Path
 
@@ -61,7 +61,7 @@ After calculating the radii of curvature and vehicle position, these values are 
 
 An example image is given below.
 
-### image
+![](https://github.com/pratvdev/CarND-AdvancedLaneDetection/blob/master/output_images/Final_Image_Example.png?raw=true)
 
 
 *Note: More example images are available in the folder Output_Images*
