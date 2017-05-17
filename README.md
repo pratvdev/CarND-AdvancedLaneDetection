@@ -4,7 +4,7 @@
 
 For this step the 20 chessboard images provided in the folder camera_cal are used. All the images are read and the 9x6 corners are identified using the function findChessboardcorners available in OpenCV. If the corners are found, the image points and object points arrays are appended with new information. After processing all the chessboard images the final image points and object points arrays are used to calculate the camera calibration matrix using calibrateCamera function in OpenCV. This matrix is used throughout the project to undistort the images. Using the calibration matrix all the chessboard images are corrected for distortion. An example is given below.
 
-### image
+![](https://github.com/pratvdev/CarND-AdvancedLaneDetection/blob/master/output_images/Ori-Undist2.png?raw=true)
 
 ## Test Images Pipeline
 
@@ -14,7 +14,7 @@ All the functions required to process the images are defined first in the python
 
 For this step the calibration matrix calculated from chessboard images is used. All the images are processed using the *cal_undistort()* function. An example for an undistorted test image is given below.
 
-### image
+![](https://github.com/pratvdev/CarND-AdvancedLaneDetection/blob/master/output_images/Ori-Undist_test_images_2.png?raw=true)
 
 ### 2) Warping/Perspective Transform
 
@@ -63,6 +63,8 @@ An example image is given below.
 
 ### image
 
+
+*Note: More example images are available in the folder Output_Images*
 
 ## Video Pipeline
 
